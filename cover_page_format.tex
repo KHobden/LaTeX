@@ -1,0 +1,42 @@
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[super,square,sort,comma,numbers]{natbib}
+\usepackage[nottoc]{tocbibind}
+\allowdisplaybreaks
+
+\newenvironment{cover}[1]
+{ 	
+	%Central, large title
+	\begin{center} \LARGE \bf
+		#1
+	\end{center}\normalfont
+	
+	%Italicised name as subtitle
+	\begin{center} \Large \it
+		Kieran Hobden
+	\end{center} \normalfont 
+	
+	\vfill
+	
+	%Abstract placed halfway between the subtitle and the end of the page
+	\begin{center}
+		\large \bf 
+		Abstract
+	\end{center}
+
+ }
+{
+	\vfill
+	\newpage
+	%Contents page (requires the compiler to run twice)
+	\hspace{0pt}
+	\renewcommand{\contentsname}{\centering Contents}
+	\tableofcontents
+	\vfill
+	\hspace{0pt}
+	\newpage
+}
